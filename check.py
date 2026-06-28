@@ -1,3 +1,4 @@
+
 import os
 import requests
 
@@ -10,9 +11,10 @@ response = requests.post(
     url,
     data={
         "chat_id": CHAT_ID,
-        "text": "🎉 Tebrikler! GitHub Actions botu başarıyla çalıştı."
-    }
+        "text": "🎉 Test: Air Arabia botu çalışıyor."
+    },
+    timeout=10
 )
 
-print(response.status_code)
-print(response.text)
+print("STATUS:", response.status_code)
+print("RESPONSE:", response.text)
